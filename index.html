@@ -248,20 +248,24 @@
 
     /* About Section */
     .about {
-      max-width: 1400px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 8rem 3rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
+      text-align: center;
+    }
+
+    .about-header {
+      margin-bottom: 3rem;
     }
 
     .about-image {
-      aspect-ratio: 3/4;
-      background: var(--bg-secondary);
-      border-radius: 2px;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
       overflow: hidden;
+      border: 3px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
     .about-image img {
@@ -281,12 +285,15 @@
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
       line-height: 1.8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .about-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
       margin-top: 3rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
@@ -430,12 +437,15 @@
     /* Responsive */
     @media (max-width: 1024px) {
       .about {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        padding: 4rem 1.5rem;
       }
 
-      .about-image {
-        max-width: 500px;
+      .about-stats {
+        gap: 2rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
       }
     }
 
@@ -469,9 +479,14 @@
         padding: 4rem 1.5rem;
       }
 
+      .about-image {
+        width: 100px;
+        height: 100px;
+      }
+
       .about-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        flex-direction: row;
+        gap: 2rem;
       }
 
       .stat-number {
@@ -652,8 +667,10 @@
     </section>
 
     <section id="about" class="about">
-      <div class="about-image">
-        <img src="转角集/肖像.jpeg" alt="王安" loading="lazy">
+      <div class="about-header">
+        <div class="about-image">
+          <img src="转角集/肖像.jpeg" alt="王安" loading="lazy">
+        </div>
       </div>
       <div class="about-content">
         <h2>关于我</h2>
@@ -681,7 +698,7 @@
 
   <footer id="contact">
     <div class="footer-left">
-      © 2024 Wang An. All rights reserved.
+      © 2026 Wang An. All rights reserved.
     </div>
     <div class="footer-right">
       <a href="mailto:wangan@shuce.top">Email</a>
