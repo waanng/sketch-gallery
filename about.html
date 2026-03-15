@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>无形艺趣 | Wang An</title>
+  <title>关于 | 无形艺趣</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -107,103 +107,99 @@
       padding-top: 80px;
     }
 
-    /* Hero Section */
-    .hero {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 8rem 3rem 4rem;
-    }
-
-    .hero-content {
+    /* About Section */
+    .about {
       max-width: 800px;
-    }
-
-    .hero h1 {
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero p {
-      font-size: 1.125rem;
-      font-weight: 400;
-      color: var(--text-secondary);
-      max-width: 600px;
-      line-height: 1.8;
-    }
-
-    /* Collections Grid */
-    .collections {
-      max-width: 1400px;
       margin: 0 auto;
-      padding: 4rem 3rem 8rem;
+      padding: 8rem 3rem;
+      text-align: center;
     }
 
-    .collections-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 3rem;
-    }
-
-    .collection-card {
-      position: relative;
-      background: var(--bg-secondary);
-      border-radius: 8px;
+    .about-image {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
       overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.4s var(--transition), box-shadow 0.4s var(--transition);
-      text-decoration: none;
-      color: inherit;
+      border: 3px solid var(--border);
     }
 
-    .collection-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .collection-cover {
-      aspect-ratio: 4/5;
-      overflow: hidden;
-    }
-
-    .collection-cover img {
+    .about-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s var(--transition);
     }
 
-    .collection-card:hover .collection-cover img {
-      transform: scale(1.05);
-    }
-
-    .collection-info {
-      padding: 2rem;
-    }
-
-    .collection-info h2 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .about h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
       letter-spacing: -0.02em;
+      margin-bottom: 1rem;
     }
 
-    .collection-info p {
-      font-size: 0.875rem;
+    .about p {
+      font-size: 1.125rem;
       font-weight: 400;
       color: var(--text-secondary);
-      margin-bottom: 0.25rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
     }
 
-    .collection-count {
+    .about-stats {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .stat-label {
       font-size: 0.75rem;
       font-weight: 500;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      margin-top: 0.5rem;
+    }
+
+    /* Contact */
+    .contact {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 3rem 8rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .contact-links a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-links a:hover {
+      color: var(--text-secondary);
     }
 
     /* Footer */
@@ -250,17 +246,30 @@
         gap: 1.5rem;
       }
 
-      .hero {
-        padding: 6rem 1.5rem 3rem;
+      .about {
+        padding: 6rem 1.5rem;
       }
 
-      .collections {
-        padding: 2rem 1.5rem 6rem;
+      .about-image {
+        width: 100px;
+        height: 100px;
       }
 
-      .collections-grid {
-        grid-template-columns: 1fr;
+      .about-stats {
         gap: 2rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .contact {
+        padding: 3rem 1.5rem 6rem;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 1rem;
       }
 
       footer {
@@ -270,26 +279,6 @@
         padding: 3rem 1.5rem;
       }
     }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .collection-card {
-      animation: fadeInUp 0.6s ease backwards;
-    }
-
-    .collection-card:nth-child(1) { animation-delay: 0.1s; }
-    .collection-card:nth-child(2) { animation-delay: 0.2s; }
-    .collection-card:nth-child(3) { animation-delay: 0.3s; }
   </style>
 </head>
 <body>
@@ -297,54 +286,43 @@
     <div class="header-inner">
       <a href="index.html" class="logo">无形艺趣</a>
       <nav>
-        <a href="index.html" class="active">画册</a>
-        <a href="about.html">关于</a>
+        <a href="index.html">画册</a>
+        <a href="about.html" class="active">关于</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>无形艺趣</h1>
-        <p>用画笔记录生活中的美好瞬间。多年速写积累，每一幅作品都是一个故事。</p>
+    <section class="about">
+      <div class="about-image">
+        <img src="转角集/肖像.jpeg" alt="王安" loading="lazy">
+      </div>
+      <h1>王安</h1>
+      <p>一个热爱速写的创作者，用画笔记录生活中的美好瞬间。</p>
+      <p>多年来，坚持每天速写，将看到的风景、人物、建筑都记录在画册中。从「空杯集」到「转角集」再到「烟火集」，每一本画册都承载着那个时期的故事和心情。</p>
+      
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">年创作</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">3</div>
+          <div class="stat-label">本画册</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">48</div>
+          <div class="stat-label">幅作品</div>
+        </div>
       </div>
     </section>
 
-    <section class="collections">
-      <div class="collections-grid">
-        <a href="corner.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="转角集/图片 1.jpg" alt="转角集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>转角集</h2>
-            <p>2020</p>
-            <span class="collection-count">15 幅作品</span>
-          </div>
-        </a>
-
-        <a href="fire.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="烟火集/IMG_20220421_121808-01.jpeg" alt="烟火集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>烟火集</h2>
-            <p>2022</p>
-            <span class="collection-count">18 幅作品</span>
-          </div>
-        </a>
-
-        <a href="empty-cup.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="空杯集/植物园.jpeg" alt="空杯集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>空杯集</h2>
-            <p>2020</p>
-            <span class="collection-count">15 幅作品</span>
-          </div>
-        </a>
+    <section class="contact">
+      <h2>联系我</h2>
+      <div class="contact-links">
+        <a href="mailto:wangan@shuce.top">Email</a>
+        <a href="https://instagram.com/waanng" target="_blank">Instagram</a>
+        <a href="#" onclick="alert('微信: waanng')" title="微信: waanng">WeChat</a>
       </div>
     </section>
   </main>
