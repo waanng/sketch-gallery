@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>无形艺趣 | Wang An 速写作品集</title>
-  <meta name="description" content="王安的速写作品集网站，展示空杯集、转角集、烟火集、自在集等画册，记录生活中的美好瞬间。">
+  <meta name="description" content="王安的速写作品集网站，展示多年速写创作画册，记录生活中的美好瞬间。">
   <meta name="keywords" content="速写, 素描, 画册, 作品集, 王安, 无形艺趣">
   <meta name="author" content="王安">
   
@@ -13,59 +13,14 @@
   <meta property="og:url" content="https://waanng.cn/">
   <meta property="og:title" content="无形艺趣 | Wang An 速写作品集">
   <meta property="og:description" content="王安的速写作品集网站，展示多年创作积累，每一幅作品都是一个故事。">
-  <meta property="og:image" content="https://waanng.cn/转角集/图片 1.jpg">
+  <meta property="og:image" content="https://waanng.cn/逆旅集/IMG_20260205_122130.jpg">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://waanng.cn/">
   <meta property="twitter:title" content="无形艺趣 | Wang An 速写作品集">
   <meta property="twitter:description" content="王安的速写作品集网站，展示多年创作积累，每一幅作品都是一个故事。">
-  <meta property="twitter:image" content="https://waanng.cn/转角集/图片 1.jpg">
-  
-  <!-- Schema.org structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "无形艺趣",
-    "alternateName": "Wang An Sketch Portfolio",
-    "url": "https://waanng.cn/",
-    "description": "王安的速写作品集网站，展示空杯集、转角集、烟火集、自在集等画册",
-    "author": {
-      "@type": "Person",
-      "name": "王安"
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "空杯集",
-          "url": "https://waanng.cn/empty-cup.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "转角集",
-          "url": "https://waanng.cn/corner.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "烟火集",
-          "url": "https://waanng.cn/fire.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "自在集",
-          "url": "https://waanng.cn/free.html"
-        }
-      ]
-    }
-  }
-  </script>
+  <meta property="twitter:image" content="https://waanng.cn/逆旅集/IMG_20260205_122130.jpg">
   
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YR1EKT39S"></script>
@@ -358,9 +313,6 @@
       animation: fadeInUp 0.6s ease backwards;
     }
 
-    .collection-card:nth-child(1) { animation-delay: 0.1s; }
-    .collection-card:nth-child(2) { animation-delay: 0.2s; }
-    .collection-card:nth-child(3) { animation-delay: 0.3s; }
   </style>
 </head>
 <body>
@@ -383,50 +335,7 @@
     </section>
 
     <section class="collections">
-      <div class="collections-grid">
-        <a href="empty-cup.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="空杯集/植物园.jpeg" alt="空杯集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>空杯集</h2>
-            <p>2020</p>
-            <span class="collection-count">15 幅作品</span>
-          </div>
-        </a>
-
-        <a href="corner.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="转角集/图片 1.jpg" alt="转角集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>转角集</h2>
-            <p>2021</p>
-            <span class="collection-count">15 幅作品</span>
-          </div>
-        </a>
-
-        <a href="fire.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="烟火集/IMG_20220421_121808-01.jpeg" alt="烟火集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>烟火集</h2>
-            <p>2022</p>
-            <span class="collection-count">18 幅作品</span>
-          </div>
-        </a>
-
-        <a href="free.html" class="collection-card">
-          <div class="collection-cover">
-            <img src="自在集/1730866310477.jpg" alt="自在集" loading="lazy">
-          </div>
-          <div class="collection-info">
-            <h2>自在集</h2>
-            <p>2023</p>
-            <span class="collection-count">9 幅作品</span>
-          </div>
-        </a>
+      <div class="collections-grid" id="collections-grid">
       </div>
     </section>
   </main>
@@ -453,5 +362,7 @@
       }
     });
   </script>
+  <script src="assets/collections-data.js"></script>
+  <script src="assets/index-page.js"></script>
 </body>
 </html>
